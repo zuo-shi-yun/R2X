@@ -4,8 +4,12 @@ RGB = input()
 
 R, G, B = RGB.split(",")
 
-ret = str(hex(int(R)))[2:] + str(hex(int(G)))[2:] + str(hex(int(B)))[2:]
-ret.split()
-print(ret)
+R = format(int(R), "02x")
+G = format(int(G), "02x")
+B = format(int(B), "02x")
 
-os.system('echo ' + ret + '| clip')
+res = R + G + B
+
+print(res)
+
+os.system('echo ' + res + '| clip')
